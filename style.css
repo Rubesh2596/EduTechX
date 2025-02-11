@@ -65,3 +65,56 @@ h2{
 a:checked{
     color: rgb(48, 104, 202);
 }
+/* Media Queries for responsiveness */
+
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .outerbox {
+        flex-direction: column;
+        border: none;
+        width: 90%;
+        max-width: 400px;
+    }
+    .rightside {
+        padding: 50px 40px;
+        min-width: auto;
+        max-width: 100%;
+        min-height: auto;
+        max-height: auto;
+    }
+    .box-1 input {
+        width: 100%;
+        height: 40px;
+    }
+    .btn button {
+        height: 40px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .rightside p {
+        font-size: 14px;
+    }
+    .box-2 {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rightside {
+        padding: 30px 20px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .box-1 input {
+        height: 35px;
+    }
+    .btn button {
+        height: 35px;
+    }
+}
