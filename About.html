@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | EduTechX</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="image/image.png" alt="EduTechX Logo" width="150px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="nextpage.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="coursepage.html">Courses</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="about-container">
+            <h2>About Us</h2>
+
+            <div class="about-intro">
+                <p>Welcome to <strong>EduTechX</strong>, a leading provider of online courses designed to help you enhance your skills and achieve your career goals. We offer a variety of professional courses across multiple fields such as Business, Computer Science, Data Science, AI, and much more.</p>
+            </div>
+
+            <div class="about-mission-vision">
+                <div class="mission">
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to provide quality education that is accessible to everyone, everywhere. We aim to empower learners with the knowledge and skills they need to succeed in today’s fast-paced digital world.</p>
+                </div>
+
+                <div class="vision">
+                    <h3>Our Vision</h3>
+                    <p>To become a global leader in online learning, enabling millions of students to build their careers, enhance their skills, and achieve their personal and professional goals.</p>
+                </div>
+            </div>
+
+            <div class="team">
+                <h3>Meet Our Team</h3>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h4>John Doe</h4>
+                    <p>Founder & CEO</p>
+                    <p>John is passionate about bringing innovative learning solutions to the masses. With years of experience in the tech industry, he leads EduTechX with vision and creativity.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/150" alt="Team Member">
+                    <h4>Jane Smith</h4>
+                    <p>Head of Curriculum Development</p>
+                    <p>Jane ensures that all our courses are of the highest quality and meet industry standards. She is dedicated to delivering effective learning experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 EduTechX | All Rights Reserved</p>
+    </footer>
+
+    <!-- <script >
+        // Smooth scrolling for anchor links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Get the target section from the href attribute
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        // Scroll smoothly to the target section
+        targetSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Highlight the current section in the navigation bar while scrolling
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav a');
+
+window.addEventListener('scroll', () => {
+    let currentSection = '';
+
+    // Loop through all sections and find the one currently in view
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    // Highlight the corresponding navigation link based on the current section
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === currentSection) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Optional: Back-to-top button functionality (appears when scrolling down)
+const backToTopButton = document.createElement('button');
+backToTopButton.innerText = '↑ Back to Top';
+backToTopButton.style.position = 'fixed';
+backToTopButton.style.bottom = '20px';
+backToTopButton.style.right = '20px';
+backToTopButton.style.padding = '10px 20px';
+backToTopButton.style.fontSize = '16px';
+backToTopButton.style.backgroundColor = '#333';
+backToTopButton.style.color = 'white';
+backToTopButton.style.border = 'none';
+backToTopButton.style.borderRadius = '5px';
+backToTopButton.style.cursor = 'pointer';
+backToTopButton.style.display = 'none';
+document.body.appendChild(backToTopButton);
+
+// Show/hide the back-to-top button based on scroll position
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+// Smooth scroll to the top when the back-to-top button is clicked
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+    </script> -->
+</body>
+</html>
