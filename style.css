@@ -1,0 +1,118 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(30deg,blue,pink);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.outerbox {
+    background: #1b263b;
+    color: white;
+    padding: 50px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+
+.box-1 input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    background: #23395d;
+    border: 1px solid #3a506b;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+}
+
+.box-2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.box-2 a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.box-2 a:hover {
+    color: #f6121d;
+}
+
+.remember {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.remember input {
+    margin-right: 10px;
+}
+
+.btn button {
+    width: 100%;
+    background: #f6121d;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn button:hover {
+    background: #b3000f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .outerbox {
+        width: 90%;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .outerbox {
+        width: 95%;
+        padding: 35px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .box-1 input, .btn button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

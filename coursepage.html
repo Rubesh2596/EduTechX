@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | EduTechX</title>
+    <link rel="stylesheet" href="coursepage.css">
+    
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="image/image.png" width="200px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="homeLink">Home</a></li>
+                <li><a href="#business" id="businessLink">Business</a></li>
+                <li><a href="#computer-science" id="csLink">Computer Science</a></li>
+                <li><a href="#data-science" id="dsLink">Data Science</a></li>
+                <li><a href="#ai-courses" id="aiLink">Artificial Intelligence</a></li>
+                <li><a href="#other-courses" id="otherLink">Other Courses</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a course..." onkeyup="searchCourses()">
+    </div>
+
+    <!-- Business Courses -->
+    <section id="business">
+        <h2>Business Courses</h2>
+        <div class="course-list">
+            <div class="course-card" data-title="BBA">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>BBA (Bachelor of Business Administration)</h3>
+                <button onclick="showCourseDetails('BBA')">View Details</button>
+            </div>
+            <div class="course-card" data-title="MBA">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>MBA (Master of Business Administration)</h3>
+                <button onclick="showCourseDetails('MBA')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Business Fundamentals">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Business Fundamentals</h3>
+                <button onclick="showCourseDetails('Business Fundamentals')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Entrepreneurship Fundamentals">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Entrepreneurship Fundamentals</h3>
+                <button onclick="showCourseDetails('Entrepreneurship Fundamentals')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Business Strategy">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Business Strategy</h3>
+                <button onclick="showCourseDetails('Business Strategy')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Startup">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Startup</h3>
+                <button onclick="showCourseDetails('Startup')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Computer Science Courses -->
+    <section id="computer-science">
+        <h2>Computer Science Courses</h2>
+        <div class="course-list">
+            <div class="course-card" data-title="BCA">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>BCA (Bachelor of Computer Application)</h3>
+                <button onclick="showCourseDetails('BCA')">View Details</button>
+            </div>
+            <div class="course-card" data-title="MCA">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>MCA (Master of Computer Application)</h3>
+                <button onclick="showCourseDetails('MCA')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Web Development">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Web Development</h3>
+                <button onclick="showCourseDetails('Web Development')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Typescript">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Typescript</h3>
+                <button onclick="showCourseDetails('Typescript')">View Details</button>
+            </div>
+            <div class="course-card" data-title="iOS Development">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>iOS Development</h3>
+                <button onclick="showCourseDetails('iOS Development')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Android Development">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Android Development</h3>
+                <button onclick="showCourseDetails('Android Development')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Science Courses -->
+    <section id="data-science">
+        <h2>Data Science Courses</h2>
+        <div class="course-list">
+            <div class="course-card" data-title="Data Science">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Data Science</h3>
+                <button onclick="showCourseDetails('Data Science')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Data Modeling">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Data Modeling</h3>
+                <button onclick="showCourseDetails('Data Modeling')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Business Analytics">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Business Analytics</h3>
+                <button onclick="showCourseDetails('Business Analytics')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Business Intelligence">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Business Intelligence</h3>
+                <button onclick="showCourseDetails('Business Intelligence')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artificial Intelligence Courses -->
+    <section id="ai-courses">
+        <h2>Artificial Intelligence Courses</h2>
+        <div class="course-list">
+            <div class="course-card" data-title="AI Engineer">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>AI Engineer</h3>
+                <button onclick="showCourseDetails('AI Engineer')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Machine Learning Analyst">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Machine Learning Analyst</h3>
+                <button onclick="showCourseDetails('Machine Learning Analyst')">View Details</button>
+            </div>
+            <div class="course-card" data-title="NLP Specialist">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>NLP Specialist</h3>
+                <button onclick="showCourseDetails('NLP Specialist')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Top Courses -->
+    <section id="other-courses">
+        <h2>Other Top Courses</h2>
+        <div class="course-list">
+            <div class="course-card" data-title="Cybersecurity">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Cybersecurity</h3>
+                <button onclick="showCourseDetails('Cybersecurity')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Cloud Computing">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Cloud Computing</h3>
+                <button onclick="showCourseDetails('Cloud Computing')">View Details</button>
+            </div>
+            <div class="course-card" data-title="Chartered Accountancy">
+                <img src="https://via.placeholder.com/300" alt="Course">
+                <h3>Chartered Accountancy</h3>
+                <button onclick="showCourseDetails('Chartered Accountancy')">View Details</button></div></div></section><footer>
+                    <p>&copy; 2025 EduTechX | All Rights Reserved</p>
+                </footer>
+                <script>
+                   // Function to search and filter courses
+function searchCourses() {
+    // Get the search query from the input
+    const query = document.getElementById('searchInput').value.toLowerCase();
+
+    // Get all sections (business, computer science, etc.)
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach(section => {
+        // Get all course cards in this section
+        const courseCards = section.querySelectorAll('.course-card');
+
+        // Check if any course card matches the search query
+        let found = false;
+
+        courseCards.forEach(courseCard => {
+            const title = courseCard.querySelector('h3').textContent.toLowerCase();
+
+            if (title.includes(query)) {
+                courseCard.style.display = 'inline-block';  // Show course card
+                found = true;  // Set found to true if a match is found
+            } else {
+                courseCard.style.display = 'none';  // Hide course card
+            }
+        });
+
+        // If no course is found, hide the entire section
+        if (found) {
+            section.style.display = 'block';  // Show section
+        } else {
+            section.style.display = 'none';  // Hide section
+        }
+    });
+}
+// Function to handle "View Details" button click
+function showCourseDetails(courseName) {
+    // Mapping course names to Coursera links
+    const courseLinks = {
+        "BBA": "https://www.coursera.org/browse/business",
+        "MBA": "https://www.coursera.org/browse/business/mba",
+        "Business Fundamentals": "https://www.coursera.org/courses?query=business%20fundamentals",
+        "Entrepreneurship Fundamentals": "https://www.coursera.org/courses?query=entrepreneurship",
+        "Business Strategy": "https://www.coursera.org/courses?query=business%20strategy",
+        "Startup": "https://www.coursera.org/courses?query=startup",
+        "BCA": "https://www.coursera.org/courses?query=bca",
+        "MCA": "https://www.coursera.org/courses?query=mca",
+        "Web Development": "https://www.coursera.org/courses?query=web%20development",
+        "Typescript": "https://www.coursera.org/courses?query=typescript",
+        "iOS Development": "https://www.coursera.org/courses?query=ios%20development",
+        "Android Development": "https://www.coursera.org/courses?query=android%20development",
+        "Data Science": "https://www.coursera.org/browse/data-science",
+        "Data Modeling": "https://www.coursera.org/courses?query=data%20modeling",
+        "Business Analytics": "https://www.coursera.org/courses?query=business%20analytics",
+        "Business Intelligence": "https://www.coursera.org/courses?query=business%20intelligence",
+        "AI Engineer": "https://www.coursera.org/courses?query=ai%20engineer",
+        "Machine Learning Analyst": "https://www.coursera.org/courses?query=machine%20learning",
+        "NLP Specialist": "https://www.coursera.org/courses?query=nlp",
+        "Cybersecurity": "https://www.coursera.org/browse/information-technology/cyber-security",
+        "Cloud Computing": "https://www.coursera.org/browse/information-technology/cloud-computing",
+        "Chartered Accountancy": "https://www.coursera.org/courses?query=chartered%20accountancy"
+    };
+
+    // Get the corresponding Coursera link
+    const courseUrl = courseLinks[courseName];
+
+    if (courseUrl) {
+        window.open(courseUrl, "_blank"); // Open the link in a new tab
+    } else {
+        alert("Course details not available.");
+    }
+}
+
+
+                </script>
+            </body></html>

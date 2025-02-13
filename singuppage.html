@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | EduTechX</title>
+    <style>
+      
+        *,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(30deg,blue,pink);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.outer {
+    background: #1b263b;
+    color: white;
+    padding: 50px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    background: #23395d;
+    border: 1px solid #3a506b;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    background: #f6121d;
+    color: black;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #b3000f;
+}
+
+.return-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.return-link a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.return-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .outer {
+        width: 90%;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .outer {
+        width: 95%;
+        padding: 35px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 14px;
+    }
+    input, button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <!-- Username field -->
+            <input type="text" id="username" placeholder="Username" required>
+
+            <!-- Password field -->
+            <input type="password" id="password" placeholder="Password" required>
+
+            <!-- Phone Number field -->
+            <input type="tel" id="phno" placeholder="Enter your phone number" pattern="[0-9]{10}" required maxlength="10">
+
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Link to return to the login page -->
+        <div class="return-link">
+            <p>Already have an account? <a href="nextpage.html">Back to Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Form submission event listener
+        document.getElementById("signUpForm").addEventListener("submit", function(event) {
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let phoneNumber = document.getElementById("phno").value.trim();
+            
+            // Check if the phone number matches the pattern (exactly 10 digits)
+            if (!/^\d{10}$/.test(phoneNumber)) {
+                alert("Please enter a valid 10-digit phone number.");
+                event.preventDefault(); // Prevent form submission if invalid phone number
+                return;
+            }
+            
+            // Validate username and password (basic checks)
+            if (username === "" || password === "") {
+                alert("Please fill out all fields.");
+                event.preventDefault(); // Prevent form submission if any field is empty
+                return;
+            }
+
+            // If all validations pass, show success message (you can proceed with sending data to a server here)
+            alert("Sign-up successful! Welcome " + username);
+        });
+    </script>
+</body>
+</html>
